@@ -1,0 +1,9 @@
+/* line 2, ../../sass/understrap/woocommerce.scss */
+.woocommerce-input-wrapper {
+  width: 100%;
+}
+
+/* line 7, ../../sass/understrap/woocommerce.scss */
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important;
+}
