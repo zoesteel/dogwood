@@ -4,55 +4,53 @@
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
+ * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @package understrap
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Dogwood
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+get_header(); ?>
 
-get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
-
+<?php
+	if( have_rows('heading_image')){
+				while( have_rows('heading_image')){
+	        the_row();
+	        $image = get_sub_field('image');
+		  	}
+	
+	   	echo "<img class='heading-image' src='" . $image . "'/>";
+   	}
 ?>
 
-<div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+		<div class="container">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
-			<main class="site-main" id="main">
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
+			<div class="row">
+				<div class="col-12">
+					<div class="entry-content">
 					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+						while ( have_posts() ) : the_post();
 
-				<?php endwhile; // end of the loop. ?>
+							get_template_part( 'template-parts/content', 'page' );
+							if(is_page('about-us') || is_page('volunteer'))
+								get_template_part( 'template-parts/content', 'call-to-actions' );
+							if(is_page('education-resources'))
+								get_template_part( 'template-parts/content', 'education-resources');
+						endwhile; // End of the loop.
+						?>
+					</div>
+				</div>
+			</div>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	
 
-			</main><!-- #main -->
-
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-	</div><!-- .row -->
-
-</div><!-- Container end -->
-
-</div><!-- Wrapper end -->
-
-<?php get_footer(); ?>
+<?php
+get_footer();

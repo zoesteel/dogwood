@@ -38,11 +38,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class=" d-flex justify-content-between flex-row col-12 navbar navbar-expand-md">
+		<!-- <nav> -->
+		<div class="container header-container">
 
-		<!-- <?php if ( 'container' == $container ) : ?> -->
-			<div class="container">
-		<!-- <?php endif; ?> -->
 			<div class="row">
 				<div class="col-12 col-sm-6">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/dogwood-logo.png" alt="Dogwood Rescue Society logo">
@@ -67,22 +65,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} ?> --><!-- end custom logo -->
 
 
-					<div class="social-donate d-flex flex-row"
+					<div class="social-donate d-flex flex-column col-12 col-sm-6 align-items-center align-items-sm-end">
 
-						<div class="social flex-end">
+						<div class="social d-flex flex-row justify-content-between">
 							<a href="https://www.facebook.com/dogwoodrescuesociety" target="_new"><i class="fab fa-facebook-f"></i></a>
 							<a href="https://www.instagram.com/dogwoodrescue" target="_new"><i class="fab fa-instagram"></i></a>
 							<a href="https://twitter.com/dogwoodrescue" target="_new"><i class="fab fa-twitter"></i></a>
 						</div>
 
-						<a href="<?php echo site_url(); ?>#give-form-100-wrap"><img src="<?php bloginfo("template_url"); ?>/images/donate.jpg" alt="" class="donate"></a>
 						<button class="btn donate-btn">Donate</button>
 					</div>
 				</div><!-- end row -->
 
 			</div><!-- end container -->
-		</nav>
-		<nav class="navbar navbar-expand-md dogwood-main-menu p-0 d-flex justify-content-center">
+		<!-- </nav> -->
+		<nav class="navbar navbar-light light-bg navbar-expand-md dogwood-main-menu p-0 d-flex justify-content-center">
 						<div class="d-flex justify-content-between">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 								<span class="navbar-toggler-icon"></span>
@@ -100,10 +97,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 									'depth'           => 2,
 									'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 								)
-							); ?>
-			<?php if ( 'container' == $container ) : ?>
+							); ?> 
+
+					<!-- Responsive Nav -->
+					<!-- <nav class="responsive-navigation" role="navigation">
+						<button class="responsive-menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'dogwood' ); ?></button>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav> -->
+		
 			</div><!-- .container -->
-			<?php endif; ?>
+		
 
 		</nav><!-- .site-navigation -->
 

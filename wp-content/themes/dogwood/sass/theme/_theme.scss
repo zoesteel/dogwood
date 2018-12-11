@@ -12,12 +12,22 @@ body {
 
 a {
 	color: $dark-green;
+	transition: color 0.3s;
+
+	&:hover {
+		color: $med-green-lighten;
+	}
 }
 
 /* ------------ MENU ------------ */
 
+.header-container {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
 .dogwood-main-menu {
-	background-color: $primary;
+	background-color: $med-green;
 	padding-top: 0.25rem;
 }
 
@@ -36,4 +46,54 @@ nav {
 	 li:last-of-type {
 	 	border-right: 1px solid #FFF;
 	 }
+}
+
+.social {
+	width: 6.5rem;
+}
+
+.donate-btn {
+	width: 6.5rem;
+	background-color: $dark-green;
+	color: $light-green;
+	font-size: 1.15rem;
+	text-transform: uppercase;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	transition: background-color 0.3s, color 0.3s;
+
+	@include shadow;
+
+	&:hover {
+		background-color: $med-green;
+		color: $dark-green;
+	}
+}
+
+
+
+
+.front-pg-slider {
+	background-color: $light-green;
+}
+
+
+.call-to-actions {
+	img {
+		width: 100%;
+		height: auto
+	}
+}
+
+
+/* ------------ FOOTER ------------ */
+
+footer {
+	background-color: $dark-green;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	a {
+		color: $light-green;
+	}
 }

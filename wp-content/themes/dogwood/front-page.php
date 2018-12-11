@@ -23,39 +23,41 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
 		<div class="row">
+			<div class="col-12">
 
+				<div class="front-pg-slider">
+				  <div>your content</div>
+				  <div>your content</div>
+				  <div>your content</div>
+				</div>
+			</div>
+		</div>
 			<main class="site-main" id="main">
 
-
-				<?php
-				// Display Size and Preference
-				get_template_part( 'template-parts/content', 'call-to-actions' );
-
-				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content', 'page' );
-				endwhile; // End of the loop.
-				?>	
-				
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
+					
 					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+					// Display Size and Preference
+					get_template_part( 'template-parts/content', 'call-to-actions' );
 
-				<?php endwhile; // end of the loop. ?> 
+					while ( have_posts() ) : the_post();
+						get_template_part( 'template-parts/content', 'page' );
+					endwhile; // End of the loop.
+					?>	
+					
+					
 			</main><!-- #main -->
-
-	</div><!-- .row -->
-
+		</div><!-- .row -->
+	</div>
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
+<script>
+jQuery(document).ready(function($){
+  $('.front-pg-slider').slick({
+
+  });
+});
+</script>
 <?php get_footer(); ?>

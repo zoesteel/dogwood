@@ -8,5 +8,21 @@ $primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
 
 $header-font: 'Raleway', Arial;
 $main-font: 'Lato', sans-serif;
-$dark-green: #545F5E;
+
+
+$dark-green: #3B5451;
+
+$med-green: #93ad99;
+
+$med-green-lighten: #b6c4a3;
+
+$light-green: #e1e8dc;
+
 $primary: #dbe2d2;
+
+@mixin shadow {
+	-moz-box-shadow: 4px 4px 6px -6px rgba(0,0,0,0.55); 
+	-webkit-box-shadow: 4px 4px 6px -6px rgba(0,0,0,0.55); 
+	box-shadow: 4px 4px 6px -6px rgba(0,0,0,0.55);
+
+}

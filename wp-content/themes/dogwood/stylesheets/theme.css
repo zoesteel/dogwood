@@ -8774,11 +8774,19 @@ body {
   font-family: 'Lato', sans-serif;
 }
 a {
-  color: #545f5e;
+  color: #3b5451;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #b6c4a3;
 }
 /* ------------ MENU ------------ */
+.header-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .dogwood-main-menu {
-  background-color: #dbe2d2;
+  background-color: #93ad99;
   padding-top: 0.25rem;
 }
 nav li {
@@ -8787,10 +8795,46 @@ nav li {
   padding-right: 0.25rem;
 }
 nav li a {
-  color: #545f5e;
+  color: #3b5451;
 }
 nav li:last-of-type {
   border-right: 1px solid #fff;
+}
+.social {
+  width: 6.5rem;
+}
+.donate-btn {
+  width: 6.5rem;
+  background-color: #3b5451;
+  color: #e1e8dc;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  transition: background-color 0.3s, color 0.3s;
+  -moz-box-shadow: 4px 4px 6px -6px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 4px 4px 6px -6px rgba(0, 0, 0, 0.55);
+  box-shadow: 4px 4px 6px -6px rgba(0, 0, 0, 0.55);
+}
+.donate-btn:hover {
+  background-color: #93ad99;
+  color: #3b5451;
+}
+.front-pg-slider {
+  background-color: #e1e8dc;
+}
+.call-to-actions img {
+  width: 100%;
+  height: auto;
+}
+/* ------------ FOOTER ------------ */
+footer {
+  background-color: #3b5451;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+footer a {
+  color: #e1e8dc;
 }
 /*
  * Use existing Bootstrap 4 classes and
