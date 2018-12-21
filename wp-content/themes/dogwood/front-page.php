@@ -27,7 +27,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="col-12">
 
 				<div class="front-pg-slider">
-				  <div>your content</div>
+				  <div><img src="<?php echo get_template_directory_uri(); ?>/img/slider.jpg" /></div>
 				  <div>your content</div>
 				  <div>your content</div>
 				</div>

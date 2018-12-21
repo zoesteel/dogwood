@@ -28,6 +28,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_script( 'jquery');
 
 		wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', $js_version, true);
+
+		wp_enqueue_script( 'accordion', get_template_directory_uri() . '/js/accordion.js', $js_version, true);
 		
 		wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', $js_version, true);
 		

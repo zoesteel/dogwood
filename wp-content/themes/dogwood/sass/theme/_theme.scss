@@ -27,7 +27,7 @@ a {
 }
 
 .dogwood-main-menu {
-	background-color: $med-green;
+	background-color: $dark-green;
 	padding-top: 0.25rem;
 }
 
@@ -39,7 +39,7 @@ nav {
 		padding-right: .25rem;
 		
 		a {
-			color: $dark-green;
+			color: $light-green!important;
 		}
 	}
 
@@ -54,7 +54,7 @@ nav {
 
 .donate-btn {
 	width: 6.5rem;
-	background-color: $dark-green;
+	background-color: $med-green;
 	color: $light-green;
 	font-size: 1.15rem;
 	text-transform: uppercase;
@@ -69,6 +69,217 @@ nav {
 		color: $dark-green;
 	}
 }
+
+
+/*--------------
+	## Menus
+	---------------*/
+
+.main-navigation {
+    clear: both;
+    height: 42px;
+    line-height: 42px;
+    width: 100vw;
+    max-width: 100%;
+    background-color: #dbe2d2;
+    color: #545F5E;
+    margin-bottom: 3vh;
+}
+
+.main-navigation ul {
+    list-style: none;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.main-navigation li {
+    float: left;
+    position: relative;
+    border-left: 1px solid #FFF;
+    width: 12%;
+    text-align: center;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.main-navigation li:last-child {
+    border-right: 1px solid #FFF;
+}
+
+.main-navigation li:hover {
+    background-color: #545F5E;
+
+}
+
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+    color: #545F5E;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Sub Menu */
+.main-navigation ul ul {
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); */
+    float: left;
+    position: absolute;
+    left: -999em;
+    z-index: 99999;
+    width: 9.2vw;
+}
+.sub-menu {
+    padding-left: 0;
+    width: 9.2vw;
+}
+.main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+}
+.main-navigation ul ul a {
+    font-weight: normal;
+    width: 9.3vw;
+    background-color: #dbe2d2;
+}
+.main-navigation ul ul li {
+    width: 9.3vw;
+    padding-left: 0;
+    margin-left: 0;
+    border: none;
+}
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+    color: #dbe2d2;
+
+}
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+    background-color: #545F5E;
+    color: #dbe2d2;
+    border: none;
+}
+/* End Sub Menu */
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+    left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+    left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {}
+
+
+/* Small menu. */
+
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: block;
+    }
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+
+ .main-navigation {
+        display: none;
+    }
+    .responsive-navigation {
+        display: block;
+        margin-bottom: 1em;
+        /* position: fixed; */
+        /* bottom: 0; */
+        /* z-index: 9999; */
+    }
+    .responsive-menu-toggle {
+        background-color: #e1e8dc;
+        width: 100vw;
+        /* height: 10vh; */
+    }
+    .responsive-menu-toggle {
+        color: #545F5E;
+        font-size: 1.25em;
+    }
+    .responsive-navigation ul {
+        list-style-type: none;
+        margin-left: 0;
+    }
+    .responsive-navigation #primary-menu {
+        padding-left: 0;
+        /* margin-bottom: 0; */
+    }
+    .responsive-navigation .menu-item a {
+        width: 100vw;
+        display: block;
+        text-decoration: none;
+        padding-left: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #e1e8dc;
+        background-color: #e1e8dc;
+    }
+    .responsive-navigation #primary-menu .current-menu-item a {
+        background-color: #95ac97;
+        color: white;
+    }
+    .responsive-navigation #primary-menu .current-menu-item ul li a {
+        background-color: white;
+        color: #95ac97;
+    }
+    .responsive-navigation .sub-menu a {
+        padding-left: 3em;
+        background-color: white;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,6 +300,7 @@ nav {
 /* ------------ FOOTER ------------ */
 
 footer {
+	color: $med-green;
 	background-color: $dark-green;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -97,3 +309,68 @@ footer {
 		color: $light-green;
 	}
 }
+
+
+
+
+/*----------------------------
+    ## Responsive Icon Legend
+----------------------------- */
+    .icons-legend h3 {
+        cursor: pointer;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: #e1e8dc;
+    }
+    .icons-legend  {
+        display: block;
+        background-color: transparent;
+        color: #3f3e3e;
+        width: 70vw;
+        text-align: center;
+        clear: both;
+    }
+
+    .icons-legend td {
+        /* width: 4em; */
+    }
+    .icon-container {
+        padding-left: 4em;
+    }
+@media only screen and (max-width: 1300px) {
+    .icons-legend h3 {
+        cursor: pointer;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: #e1e8dc;
+    }
+    .icons-legend  {
+        display: block;
+        background-color: transparent;
+        color: #3f3e3e;
+        width: 70vw;
+        text-align: center;
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 315px){
+    .site-footer{
+        min-height: 40em;
+        }
+}
+@media only screen and (max-width: 868px) {
+    .icons-legend {
+        width: 100vw;
+    }
+    .icon-container {
+        padding-left: 0;
+    }
+
+    .divider{
+        width:50vw;
+        border-bottom:1px solid #dbe2d2;
+        margin:0 auto;
+    }
+}
+
