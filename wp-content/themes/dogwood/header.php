@@ -37,28 +37,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'dogwood' ); ?></a>
-
 		
-		<div class="container header-container">
+		<div class="container">
 
 			<div class="row">
 				<div class="col-12 col-sm-6">
 					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><img src="<?php echo get_template_directory_uri(); ?>/img/dogwood-logo.svg" alt="Dogwood Rescue Society logo"></a>
 				</div><!-- end col -->
 
-					<div class="social-donate d-flex flex-column col-12 col-sm-6 align-items-center align-items-sm-end">
+				<div class="social-donate d-flex flex-column col-12 col-sm-6 align-items-center align-items-sm-end">
 
-						<div class="social d-flex flex-row justify-content-between">
-							<a href="https://www.facebook.com/dogwoodrescuesociety" target="_new" alt="Link to Facebook"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://www.instagram.com/dogwoodrescue" target="_new" alt="Link to Instagram"><i class="fab fa-instagram"></i></a>
-							<a href="https://twitter.com/dogwoodrescue" target="_new" alt="Link to Twitter"><i class="fab fa-twitter"></i></a>
-						</div>
+					<div class="social d-flex flex-row justify-content-between">
+						<a href="https://www.facebook.com/dogwoodrescuesociety" target="_new" alt="Link to Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.instagram.com/dogwoodrescue" target="_new" alt="Link to Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="https://twitter.com/dogwoodrescue" target="_new" alt="Link to Twitter"><i class="fab fa-twitter"></i></a>
+					</div>
 
 						<button class="btn donate-btn" alt="Donate to Dogwood Rescue Society">Donate</button>
-					</div>
-				</div><!-- end row -->
+				</div>
+			</div><!-- end row -->
 
-			</div><!-- end container -->
+		</div><!-- end container -->
 
 
 		
